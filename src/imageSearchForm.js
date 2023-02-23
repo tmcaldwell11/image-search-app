@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function imageSearchForm() {
+  //create hook for useState
+  const [query, setQuery] = useState("");
+  console.log(query);
+  
   return (
     <>
     <form className="form"> 
@@ -11,6 +15,8 @@ export default function imageSearchForm() {
           name="query"
           className="input"
           placeholder={'Search images here...'}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
         <button type="submit" className="button">
           Search
