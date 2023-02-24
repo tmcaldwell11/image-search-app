@@ -3,14 +3,18 @@ import './App.css';
 import ImageCard from './imageCard';
 import ImageSearchForm from "./imageSearchForm";
 
+
+
+
 export default function App() {
   const [img, setImg] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [query, setQuery] = useState('');
 
+
   useEffect(() => {
     const key = '33859996-d57edfbba88808139a59556d2';
-    const url = `https://pixabay.com/api/?key=${key}&q=${query}&image_type=photo&pretty=true&safesearch=false&per_page=10`;    
+    const url = `https://pixabay.com/api/?key=${key}&q=${query}&per_page=15`;    
     //console.log(url)
     fetch(url)
       .then((response) => response.json())
@@ -21,7 +25,6 @@ export default function App() {
           setIsLoading(false);
         },
         (error) => {
-          //setIsLoading(true);
           // setError(error);
 
         }
@@ -29,6 +32,7 @@ export default function App() {
   }, [query]);
 
   return (
+   
     <div className="App">
       <div className="container">
         <h1 className="title">Pixabay Image Search App</h1>
@@ -41,9 +45,15 @@ export default function App() {
       ) : (
           <div className="container">
             <div className="card-list">
-              {img.map((data) => (
+            
+          
+            
+             {img.map((data) => (
                 <ImageCard key={data.id} img={data} />
+                
               ))}
+               
+                     
             </div>
           </div>
           )}
