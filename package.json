@@ -43,6 +43,6 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0",
-    "homepage": "http://tmcaldwell11.github.io/image-search-app"
+    "homepage": "https://tmcaldwell11.github.io/image-search-app/"
   }
 }
