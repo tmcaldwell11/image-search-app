@@ -1,13 +1,18 @@
 import React, {useState} from "react";
 
-export default function imageSearchForm() {
-  //create hook for useState
+//create hook for useState
+export default function imageSearchForm({imageSearchHook}) {
   const [query, setQuery] = useState("");
-  console.log(query);
+  //console.log(query);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    imageSearchHook(query);
+  };
+
   
   return (
     <>
-    <form className="form"> 
+    <form className="form" onSubmit={onSubmit}> 
         <label className="label" htmlFor="query"> 
         </label>
         <input
@@ -18,7 +23,9 @@ export default function imageSearchForm() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button type="submit" className="button">
+        <button type="submit"
+
+        className="button" >
           Search
         </button>
       </form>

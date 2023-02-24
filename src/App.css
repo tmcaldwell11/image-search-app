@@ -2,7 +2,7 @@
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
   color: #333;
-  font-size: 10px;
+  font-size: 18px;
 }
 
 .App {
@@ -24,10 +24,9 @@
 .button {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  padding: 1rem 2rem;
+  padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
-  font-size: 1.4rem;
+  font-size: 1.0 rem;
   cursor: pointer;
   transition: background-color 250ms;
 }
@@ -36,30 +35,20 @@
   background-color: rgba(0, 0, 0, 0.85);
 }
 
+
 .card-list {
   column-count: 3;
 }
 
-.card {
-  margin-bottom: 1rem;
+img {
   display: flex;
+  width: 100%;
+  height: auto;
 }
 
-.card--image {
-  flex: 100%;
-  margin-top: 1rem;
-  border-radius: 10px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+    margin-bottom: 1rem;
+    display: flex;
 }
 
 @media (min-width: 768px) {
@@ -73,8 +62,4 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-    .card-list {
-        column-count: 1;
-    }
-}
+
